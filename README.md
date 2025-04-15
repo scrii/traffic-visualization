@@ -13,6 +13,8 @@ This command will launch the services from [`compose.yaml`](`/compose.yaml`):
 docker compose up --build
 ```
 
+*Network mode is set as host, no ports are exposed explicitly.*
+
 ## Manual Setup (Fallback)
 
 ### Requirements
