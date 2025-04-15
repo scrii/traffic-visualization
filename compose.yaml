@@ -1,0 +1,20 @@
+services:
+  csv-parser:
+    build:
+      context: csv-parser/
+    network_mode: host
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: server/
+    network_mode: host
+
+  visualization:
+    build:
+      context: visualization/
+    network_mode: host
+    depends_on:
+      - csv-parser
+      - server
